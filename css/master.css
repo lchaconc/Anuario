@@ -27,7 +27,7 @@ body {
 
 #visorSecundario {
     padding: 2em;
-    min-height: 24em;
+    min-height: 20em;
 
 }
 .col-splash{
@@ -45,7 +45,7 @@ body {
 }
 
 #listaEstudiantes {    
-    height: 30em;
+    height: 24em;
     overflow-y: scroll;
 }
 
