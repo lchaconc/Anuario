@@ -15,7 +15,9 @@ body {
 }
 
 .container {
-    margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0.5%; 
     border: solid 1px #000000;
     background-color: #fff;    
 }
