@@ -1,5 +1,73 @@
 body {
-    background-color: #fff;
+    background-color: #000;
     margin: 0;
     padding: 0;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-color: bisque;
+    margin-top: 1em;
+    padding: 2em;
+}
+
+.container {
+    margin: 1%;
+    border: solid 1px #000000;
+    background-color: #fff;    
+}
+
+.btn-menu-secundario {
+    width: 32%;
+    margin-left: 1%
+}
+
+#visorSecundario {
+    padding: 2em;
+    min-height: 24em;
+
+}
+.col-splash{
+    min-height: 40em;
+    padding-top: 22%;
+}
+
+.alert-estudiante {
+    cursor: pointer;
+}
+
+.alert-estudiante:hover {
+    color: coral;
+    background-color: blanchedalmond;
+}
+
+#listaEstudiantes {    
+    height: 30em;
+    overflow-y: scroll;
+}
+
+/* Estilo scroll */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* Fin del estilo scroll ------------------ */
