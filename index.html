@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anuario</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./vendor/bootstrap-4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/master.css" />
+    
+    <script src="./vendor/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="./vendor/bootstrap-4.1/js/bootstrap.min.js"></script>
+    <script src="./js/model.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/controller.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron"><h1>El Anuario</h1></div>
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pillsInicio" data-toggle="pill" href="#" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pillsCompas" data-toggle="pill" href="#" role="tab" aria-controls="pills-profile" aria-selected="false">Compas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pillsProfes" data-toggle="pill" href="#" role="tab" aria-controls="pills-contact" aria-selected="false">Los profes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pillsCole" data-toggle="pill" href="#" role="tab" aria-controls="pills-contact" aria-selected="false">El cole</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pillsGrupo" data-toggle="pill" href="#" role="tab" aria-controls="pills-contact" aria-selected="false">El grupo</a>
+                </li>
+            </ul>
+    
+        <div class="row" id="mainVisor">
+            <div class="col-sm-4">
+                    <div class="alert alert-warning text-center" role="alert">
+                            <H4>ESTUDIANTES</H4>
+                    </div>
+            </div>
+            <div class="col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-12" id="divEstudiante">
+                            <h3>Nombre del estudiante</div></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" id="divBtnSecundaria">
+                                <button type="button" class="btn btn-outline-success btn-lg">Así soy</button>
+                                <button type="button" class="btn btn-outline-danger btn-lg ">Fotos</button>
+                                <button type="button" class="btn btn-outline-warning btn-lg ">Testamento</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12" id="visorSecundario">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut architecto vero nemo corrupti natus at repellat similique ullam quibusdam expedita autem modi magni. Ipsa libero obcaecati ab officia? Libero.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
