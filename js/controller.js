@@ -1,5 +1,7 @@
 "use strict";
-const m = new Model (),  v = new View ();
+const m = new Model (),  
+v = new View ();
+var currentStudent=""; // Registro actual que fue seleccinado por el usuario.
 
 
 $(document).ready(function () {
@@ -23,6 +25,9 @@ function loadApp (dataset) {
             case "pillsCompas":
                 v.mainStudents($("#mainVisor"));
                 v.listStudents(dataset,$("#listaEstudiantes"));
+                $(".alert-estudiante").click(function () { 
+                    selectStudent(this.id);
+                });
             break;
             case "pillsProfes":
             console.log("profes");
@@ -42,10 +47,12 @@ function loadApp (dataset) {
             console.log("Selecciòn fuera de rango");
             
             break;
-        }
-
-        
-    });
-    
+        }        
+    });    
 }
 
+
+function selectStudent(item) {
+    currentStudent = m.getRecord(item);
+    v.infoStudent(currentStudent.soy);
+}

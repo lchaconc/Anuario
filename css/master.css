@@ -51,6 +51,12 @@ body {
     overflow-y: scroll;
 }
 
+.btn-oculto {
+    display: none;
+}
+
+
+
 /* Estilo scroll */
 /* width */
 ::-webkit-scrollbar {

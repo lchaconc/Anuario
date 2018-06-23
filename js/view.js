@@ -56,14 +56,14 @@ View.prototype.mainStudents = function (visor) {
         "<div class='col-sm-8'>" +
             "<div class='row'>" +
                 "<div class='col-sm-12' id='divEstudiante'>" +
-                    "<h3>Nombre del estudiante</h3>" +
+                    "<h3 id='nombreEstudiante'></h3>" +
                 "</div>" +
             "</div>" +
         "<div class='row'>" +
             "<div class='col-sm-12' id='divBtnSecundaria'>" +
-                    "<button type='button' class='btn btn-outline-success btn-lg btn-menu-secundario'>Así soy</button>" +
-                    "<button type='button' class='btn btn-outline-danger btn-lg btn-menu-secundario'>Fotos</button>" +
-                    "<button type='button' class='btn btn-outline-warning btn-lg btn-menu-secundario'>Testamento</button>" +
+                    "<button type='button' class='btn btn-outline-success btn-lg btn-menu-secundario btn-oculto'>Así soy</button>" +
+                    "<button type='button' class='btn btn-outline-danger btn-lg btn-menu-secundario btn-oculto'>Fotos</button>" +
+                    "<button type='button' class='btn btn-outline-warning btn-lg btn-menu-secundario btn-oculto'>Testamento</button>" +
             "</div>" +
         "</div>" +
         "<div class='row'>" + 
@@ -75,13 +75,12 @@ View.prototype.mainStudents = function (visor) {
         $(visor).html(htmlContent);
    }
 
-
 View.prototype.listStudents = function (array, visor) {
 
     var htmlContTmp = $("<div></div>");
 
     for (let index = 0; index < array.length; index++) {
-        let htmlAlert = $("<div class='alert alert-success alert-estudiante' role='alert'> </div>");
+        let htmlAlert = $("<div id='"+ index +"' class='alert alert-success alert-estudiante' role='alert'> </div>");
         $(htmlAlert).append(array[index].nombre );
         $(htmlAlert).append(" " + array[index].apellido );
         $(htmlContTmp).append(htmlAlert);        
@@ -89,6 +88,12 @@ View.prototype.listStudents = function (array, visor) {
 
     $(visor).append(htmlContTmp);
 
+}
+
+View.prototype.infoStudent = function (info) {
+    $(".btn-menu-secundario").slideDown();
+    $("#visorSecundario").empty();
+    $("#visorSecundario").html(info);
 }
 
 

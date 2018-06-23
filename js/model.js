@@ -18,3 +18,7 @@ Model.prototype.loadJson = function (mCallBack) {
      return  Model.prototype.dataSet;
    }
 
+Model.prototype.getRecord = function (i) {
+    return  Model.prototype.dataSet[i];
+}
+
