@@ -90,10 +90,13 @@ View.prototype.listStudents = function (array, visor) {
 
 }
 
-View.prototype.infoStudent = function (info) {
+View.prototype.infoStudent = function (student) {
     $(".btn-menu-secundario").slideDown();
     $("#visorSecundario").empty();
-    $("#visorSecundario").html(info);
+    $("#visorSecundario").html(student.info);
+    $("#nombreEstudiante").text(student.nombre + " " + student.apellido);
+
+
 }
 
 

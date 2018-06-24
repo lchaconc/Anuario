@@ -54,5 +54,5 @@ function loadApp (dataset) {
 
 function selectStudent(item) {
     currentStudent = m.getRecord(item);
-    v.infoStudent(currentStudent.soy);
+    v.infoStudent(currentStudent);
 }
