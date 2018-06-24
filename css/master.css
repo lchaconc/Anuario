@@ -51,8 +51,18 @@ body {
     overflow-y: scroll;
 }
 
-.btn-oculto {
+#divBtnSecundaria {
     display: none;
+}
+
+.btn-activo {
+    background-color: bisque;
+    font-weight: bold;
+}
+
+.btn-inactivo {
+    background-color: transparent;
+    font-weight: normal;
 }
 
 

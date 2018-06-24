@@ -26,7 +26,10 @@ function loadApp (dataset) {
                 v.mainStudents($("#mainVisor"));
                 v.listStudents(dataset,$("#listaEstudiantes"));
                 $(".alert-estudiante").click(function () { 
+                    $(".alert-estudiante").removeClass("btn-activo");
+                    $(this).addClass("btn-activo");
                     selectStudent(this.id);
+                    
                 });
             break;
             case "pillsProfes":
@@ -55,4 +58,25 @@ function loadApp (dataset) {
 function selectStudent(item) {
     currentStudent = m.getRecord(item);
     v.infoStudent(currentStudent);
+    v.animationInfoStudent();
+    $(".btn-menu-secundario").removeClass("btn-activo");
+    $("#btnIam").addClass("btn-activo");
+    $(".btn-menu-secundario").click(function () {
+        $(".btn-menu-secundario").removeClass("btn-activo");
+        $(this).addClass("btn-activo"); 
+        switch (this.id) {
+            case "btnIam":
+                v.infoStudent(currentStudent);     
+                break;
+            case "btnPictures":
+                v.pictures(currentStudent);
+                break;
+            case "btnTestament":
+                v.testament(currentStudent);
+                break;
+        
+            default:
+                break;
+        }        
+    });
 }

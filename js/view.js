@@ -61,13 +61,13 @@ View.prototype.mainStudents = function (visor) {
             "</div>" +
         "<div class='row'>" +
             "<div class='col-sm-12' id='divBtnSecundaria'>" +
-                    "<button type='button' class='btn btn-outline-success btn-lg btn-menu-secundario btn-oculto'>Así soy</button>" +
-                    "<button type='button' class='btn btn-outline-danger btn-lg btn-menu-secundario btn-oculto'>Fotos</button>" +
-                    "<button type='button' class='btn btn-outline-warning btn-lg btn-menu-secundario btn-oculto'>Testamento</button>" +
+                    "<button type='button' id='btnIam' class='btn btn-outline-success btn-lg btn-menu-secundario'>Así soy</button>" +
+                    "<button type='button' id='btnPictures' class='btn btn-outline-danger btn-lg btn-menu-secundario'>Fotos</button>" +
+                    "<button type='button' id='btnTestament' class='btn btn-outline-warning btn-lg btn-menu-secundario'>Testamento</button>" +
             "</div>" +
         "</div>" +
-        "<div class='row'>" + 
-            "<div class='col-sm-12' id='visorSecundario'>" +
+        "<div  id='visorSecundario' class='row'>" + 
+            "<div class='col-sm-12'>" +
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut architecto vero nemo corrupti natus at repellat similique ullam quibusdam expedita autem modi magni. Ipsa libero obcaecati ab officia? Libero." +
             "</div>" + 
         "</div>" +
@@ -91,12 +91,38 @@ View.prototype.listStudents = function (array, visor) {
 }
 
 View.prototype.infoStudent = function (student) {
-    $(".btn-menu-secundario").slideDown();
     $("#visorSecundario").empty();
-    $("#visorSecundario").html(student.info);
-    $("#nombreEstudiante").text(student.nombre + " " + student.apellido);
+    $("#nombreEstudiante").empty();
 
+    var htmlCol = $(" <div class='col-sm-12'> </div>" );
+    $(htmlCol).append(student.soy);
+    $("#visorSecundario").html(htmlCol);
+    $("#nombreEstudiante").text(student.nombre + " " + student.apellido);      
+}
 
+View.prototype.animationInfoStudent = function () {
+    $("#nombreEstudiante").fadeIn("slow", function () {
+        $("#divBtnSecundaria").slideDown("slow");
+      } ); 
+}
+
+View.prototype.pictures = function (student) {
+
+    htmlCol = $(
+        "<div class='col-sm-4'> <img src=' " + student.foto1 + " ' class='img-fluid img-thumbnail' alt='Foto uno'> </div>" + 
+        "<div class='col-sm-4'> <img src=' " + student.foto2 + " ' class='img-fluid img-thumbnail' alt='Foto dos'> </div>" + 
+        "<div class='col-sm-4'> <img src=' " + student.foto3 + " ' class='img-fluid img-thumbnail' alt='Foto tres'> </div>"
+    );
+
+    $("#visorSecundario").html(htmlCol);
+}
+
+View.prototype.testament = function (student) {
+    $("#visorSecundario").empty();
+
+    var htmlCol = $(" <div class='col-sm-12'> </div>" );
+    $(htmlCol).append(student.testamento);
+    $("#visorSecundario").html(htmlCol);    
 }
 
 
