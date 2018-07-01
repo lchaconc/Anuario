@@ -37,7 +37,7 @@ body {
     padding-top: 22%;
 }
 
-.alert-estudiante {
+.alert-estudiante, .alert-profe {
     cursor: pointer;
 }
 
@@ -45,6 +45,16 @@ body {
     color: coral;
     background-color: blanchedalmond;
 }
+
+.alert-profe:hover {
+    color: crimson;
+    background-color:darkcyan;
+}
+
+/* 
+Preguntar cantidad de docentes. En caso de ser màs de 6 se debe implementar esa regla al elemento 
+listaProfe
+*/
 
 #listaEstudiantes {    
     height: 24em;

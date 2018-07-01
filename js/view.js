@@ -126,3 +126,62 @@ View.prototype.testament = function (student) {
 }
 
 
+//Profesores: --------------------------------------------
+View.prototype.mainTeachers = function (visor) { 
+    $(visor).empty();
+    var htmlContent = (
+      "<div class='col-sm-4'>" +
+          "<div class='row'> " +
+              "<div class='col-sm-12'>" +
+                  "<div class='alert alert-warning text-center' role='alert'>" +
+                  "<h5>Proesores</h5>" + 
+                  "</div>" +
+              "</div>" +
+          "</div>" +
+          "<div class='row' >" +
+          "<div class='col-sm-12' id='listaProfe'></div>" +
+          "</div>" +
+      "</div>" +
+      "<div class='col-sm-8'>" +
+          "<div class='row'>" +
+              "<div class='col-sm-12' id='divProfe'>" +
+                  "<h3 id='nombreProfe'></h3>" +
+              "</div>" +
+          "</div>" +    
+      "<div  id='visorSecundario' class='row'>" + 
+          "<div class='col-sm-12'>" +
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut architecto vero nemo corrupti natus at repellat similique ullam quibusdam expedita autem modi magni. Ipsa libero obcaecati ab officia? Libero." +
+          "</div>" + 
+      "</div>" +
+      "</div>");
+      $(visor).html(htmlContent);
+ }
+
+ View.prototype.listTeachers = function (array, visor) {
+
+    var htmlContTmp = $("<div></div>");
+
+    for (let index = 0; index < array.length; index++) {
+        let htmlAlert = $("<div id='"+ index +"' class='alert alert-danger alert-profe' role='alert'> </div>");
+        $(htmlAlert).append(array[index].nombre );
+        $(htmlAlert).append(" " + array[index].apellido );
+        $(htmlContTmp).append(htmlAlert);        
+    }
+
+    $(visor).append(htmlContTmp);
+
+}
+
+
+View.prototype.infoTeacer = function (item) {
+    $("#visorSecundario").empty();
+    $("#nombreProfe").empty();
+
+    var htmlCol = $(" <div class='col-sm-12 text-center'> </div>" );    
+    $(htmlCol).append(item.consejo + "<hr>");
+    $(htmlCol).append("<img src='" + item.foto + "' alt='foto profesor'>");
+    $("#visorSecundario").html(htmlCol);
+    $("#nombreProfe").text(item.nombre + " " + item.apellido);      
+}
+
+

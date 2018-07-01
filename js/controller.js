@@ -1,13 +1,13 @@
 "use strict";
-const m = new Model (),  
-v = new View ();
+const m = new Model (), v = new View ();
 var currentStudent=""; // Registro actual que fue seleccinado por el usuario.
 
 
+
 $(document).ready(function () {
-    console.log("ready");
+   // console.log("ready");
     setTimeout(function () { 
-        m.loadJson(loadApp);    
+        m.loadJson( "./data/estudiantes.json", loadApp, "s");    
      }, 500);
     
 });
@@ -33,7 +33,7 @@ function loadApp (dataset) {
                 });
             break;
             case "pillsProfes":
-            console.log("profes");
+            m.loadJson("./data/profesores.json", loadTechers, "t");
             
             break;
             case "pillsCole":
@@ -56,7 +56,7 @@ function loadApp (dataset) {
 
 
 function selectStudent(item) {
-    currentStudent = m.getRecord(item);
+    currentStudent = m.getRecordStudents(item);
     v.infoStudent(currentStudent);
     v.animationInfoStudent();
     $(".btn-menu-secundario").removeClass("btn-activo");
@@ -79,4 +79,16 @@ function selectStudent(item) {
                 break;
         }        
     });
+}
+
+
+function loadTechers(array) {
+    v.mainTeachers($("#mainVisor"));
+    v.listTeachers(array,$("#listaProfe"));
+    $(".alert-profe").click(function (params) {
+       // console.log(m.getRecordTeachers(this.id));
+        v.infoTeacer(m.getRecordTeachers(this.id));
+        
+    })
+    
 }
