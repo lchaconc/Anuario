@@ -179,7 +179,7 @@ View.prototype.infoTeacer = function (item) {
 
     var htmlCol = $(" <div class='col-sm-12 text-center'> </div>" );    
     $(htmlCol).append(item.consejo + "<hr>");
-    $(htmlCol).append("<img src='" + item.foto + "' alt='foto profesor'>");
+    $(htmlCol).append("<img class='img-fluid' src='" + item.foto + "' alt='foto profesor'>");
     $("#visorSecundario").html(htmlCol);
     $("#nombreProfe").text(item.nombre + " " + item.apellido);      
 }
