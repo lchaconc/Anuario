@@ -1,5 +1,5 @@
 function View () {
-    
+
 }
 
 
@@ -23,7 +23,7 @@ View.prototype.htmlTemplate = function (visor) {
                     "<a class='nav-link' id='pillsGrupo' data-toggle='pill' href='#' role='tab' aria-controls='pills-contact' aria-selected='false'>El grupo</a>" +
                 "</li>" +
             "</ul>" +
-        "<div class='row' id='mainVisor'></div>" 
+        "<div class='row' id='mainVisor'></div>"
     );
     $(visor).html(htmlContent);
 
@@ -32,20 +32,20 @@ View.prototype.htmlTemplate = function (visor) {
 View.prototype.startScreen = function (visor) {
     $(visor).empty();
     var htmlContent = $("<div class='col-sm-12 text-center'></div>"),
-    htmlImage = $("<img class='img-fluid' src='img/grupal.png'>");
+    htmlImage = $("<img class='img-fluid' src='img/grupal.jpg'>");
     $(htmlContent).append(htmlImage);
     $(htmlContent).append("<br><h2>Generación 2018</h2>");
     $(visor).html(htmlContent);
   }
 
-View.prototype.mainStudents = function (visor) { 
+View.prototype.mainStudents = function (visor) {
       $(visor).empty();
       var htmlContent = (
         "<div class='col-sm-4'>" +
             "<div class='row'> " +
                 "<div class='col-sm-12'>" +
                     "<div class='alert alert-warning text-center' role='alert'>" +
-                    "<h5>ESTUDIANTES</h5>" + 
+                    "<h5>ESTUDIANTES</h5>" +
                     "</div>" +
                 "</div>" +
             "</div>" +
@@ -66,10 +66,10 @@ View.prototype.mainStudents = function (visor) {
                     "<button type='button' id='btnTestament' class='btn btn-outline-warning btn-lg btn-menu-secundario'>Testamento</button>" +
             "</div>" +
         "</div>" +
-        "<div  id='visorSecundario' class='row'>" + 
+        "<div  id='visorSecundario' class='row'>" +
             "<div class='col-sm-12'>" +
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut architecto vero nemo corrupti natus at repellat similique ullam quibusdam expedita autem modi magni. Ipsa libero obcaecati ab officia? Libero." +
-            "</div>" + 
+            "</div>" +
         "</div>" +
         "</div>");
         $(visor).html(htmlContent);
@@ -83,7 +83,7 @@ View.prototype.listStudents = function (array, visor) {
         let htmlAlert = $("<div id='"+ index +"' class='alert alert-success alert-estudiante' role='alert'> </div>");
         $(htmlAlert).append(array[index].nombre );
         $(htmlAlert).append(" " + array[index].apellido );
-        $(htmlContTmp).append(htmlAlert);        
+        $(htmlContTmp).append(htmlAlert);
     }
 
     $(visor).append(htmlContTmp);
@@ -97,20 +97,20 @@ View.prototype.infoStudent = function (student) {
     var htmlCol = $(" <div class='col-sm-12'> </div>" );
     $(htmlCol).append(student.soy);
     $("#visorSecundario").html(htmlCol);
-    $("#nombreEstudiante").text(student.nombre + " " + student.apellido);      
+    $("#nombreEstudiante").text(student.nombre + " " + student.apellido);
 }
 
 View.prototype.animationInfoStudent = function () {
     $("#nombreEstudiante").fadeIn("slow", function () {
         $("#divBtnSecundaria").slideDown("slow");
-      } ); 
+      } );
 }
 
 View.prototype.pictures = function (student) {
 
     htmlCol = $(
-        "<div class='col-sm-4'> <img src=' " + student.foto1 + " ' class='img-fluid img-thumbnail' alt='Foto uno'> </div>" + 
-        "<div class='col-sm-4'> <img src=' " + student.foto2 + " ' class='img-fluid img-thumbnail' alt='Foto dos'> </div>" + 
+        "<div class='col-sm-4'> <img src=' " + student.foto1 + " ' class='img-fluid img-thumbnail' alt='Foto uno'> </div>" +
+        "<div class='col-sm-4'> <img src=' " + student.foto2 + " ' class='img-fluid img-thumbnail' alt='Foto dos'> </div>" +
         "<div class='col-sm-4'> <img src=' " + student.foto3 + " ' class='img-fluid img-thumbnail' alt='Foto tres'> </div>"
     );
 
@@ -122,19 +122,19 @@ View.prototype.testament = function (student) {
 
     var htmlCol = $(" <div class='col-sm-12'> </div>" );
     $(htmlCol).append(student.testamento);
-    $("#visorSecundario").html(htmlCol);    
+    $("#visorSecundario").html(htmlCol);
 }
 
 
 //Profesores: --------------------------------------------
-View.prototype.mainTeachers = function (visor) { 
+View.prototype.mainTeachers = function (visor) {
     $(visor).empty();
     var htmlContent = (
       "<div class='col-sm-4'>" +
           "<div class='row'> " +
               "<div class='col-sm-12'>" +
                   "<div class='alert alert-warning text-center' role='alert'>" +
-                  "<h5>Proesores</h5>" + 
+                  "<h5>Proesores</h5>" +
                   "</div>" +
               "</div>" +
           "</div>" +
@@ -147,11 +147,11 @@ View.prototype.mainTeachers = function (visor) {
               "<div class='col-sm-12' id='divProfe'>" +
                   "<h3 id='nombreProfe'></h3>" +
               "</div>" +
-          "</div>" +    
-      "<div  id='visorSecundario' class='row'>" + 
+          "</div>" +
+      "<div  id='visorSecundario' class='row'>" +
           "<div class='col-sm-12'>" +
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut architecto vero nemo corrupti natus at repellat similique ullam quibusdam expedita autem modi magni. Ipsa libero obcaecati ab officia? Libero." +
-          "</div>" + 
+          "</div>" +
       "</div>" +
       "</div>");
       $(visor).html(htmlContent);
@@ -165,7 +165,7 @@ View.prototype.mainTeachers = function (visor) {
         let htmlAlert = $("<div id='"+ index +"' class='alert alert-danger alert-profe' role='alert'> </div>");
         $(htmlAlert).append(array[index].nombre );
         $(htmlAlert).append(" " + array[index].apellido );
-        $(htmlContTmp).append(htmlAlert);        
+        $(htmlContTmp).append(htmlAlert);
     }
 
     $(visor).append(htmlContTmp);
@@ -177,11 +177,9 @@ View.prototype.infoTeacer = function (item) {
     $("#visorSecundario").empty();
     $("#nombreProfe").empty();
 
-    var htmlCol = $(" <div class='col-sm-12 text-center'> </div>" );    
+    var htmlCol = $(" <div class='col-sm-12 text-center'> </div>" );
     $(htmlCol).append(item.consejo + "<hr>");
     $(htmlCol).append("<img class='img-fluid' src='" + item.foto + "' alt='foto profesor'>");
     $("#visorSecundario").html(htmlCol);
-    $("#nombreProfe").text(item.nombre + " " + item.apellido);      
+    $("#nombreProfe").text(item.nombre + " " + item.apellido);
 }
-
-
