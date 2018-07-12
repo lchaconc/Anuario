@@ -38,6 +38,7 @@ function loadApp (dataset) {
             break;
             case "pillsCole":
             console.log("Cole");
+            v.mainHighSchool($("#mainVisor"));
             
             break;
             case "pillsGrupo":

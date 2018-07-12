@@ -99,3 +99,12 @@ listaProfe
 }
 
 /* Fin del estilo scroll ------------------ */
+
+
+.col-info-cole {    
+    min-height: 29em;
+    padding: 2em;
+    background-color: bisque;
+    border-radius: 15px;
+
+}

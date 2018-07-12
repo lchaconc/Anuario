@@ -184,4 +184,37 @@ View.prototype.infoTeacer = function (item) {
     $("#nombreProfe").text(item.nombre + " " + item.apellido);      
 }
 
+View.prototype.mainHighSchool = function (visor) { 
+    $(visor).empty();
+    
+    var htmlCol1 = $("<div class='col-sm-8  col-info-cole'>" +
+    "<h2> Centro Educativo El Carmelo</h2>" +
+    "Curabitur id auctor quam. Donec quis est dictum, suscipit metus id, vestibulum orci. Ut molestie nec enim a ultricies. Fusce tincidunt urna vel pellentesque fringilla. Nam pretium nec libero quis imperdiet. Nullam sem felis, iaculis id mollis in, interdum suscipit nisl. Praesent ullamcorper diam quis ex iaculis venenatis. Etiam eget vulputate nisl. Duis odio risus, maximus eget pharetra ut, sodales efficitur mauris. Praesent gravida odio neque, ac pellentesque eros pellentesque sit amet. Integer volutpat quam vel libero venenatis, eu imperdiet nisl malesuada. Praesent dictum, enim a interdum tristique, turpis mauris interdum ex, eget venenatis lorem risus ut justo. Phasellus congue in ante non facilisis. Sed et consequat eros. Quisque ex elit, mollis in ultricies a, finibus eget arcu. " +
+    "</div>"),
+
+    htmlCol2 = $("<div class='col-sm-4'>" + 
+    "<div class='row'>" +
+        "<div class='col-sm-6'>"   + 
+            "<img class='img-thumbnail' src='img/colegio.jpg' alt='Colegio 1' >" +
+        "</div>" +
+        "<div class='col-sm-6'>"   + 
+            "<img class='img-thumbnail' src='img/colegio3.jpg' alt='Colegio 1' >" +
+        "</div>" +
+    "</div>" +
+    "<div class='row'>" +
+        "<div class='col-sm-12'>"   + 
+            "<img class='img-thumbnail' src='img/colegio2.jpg' alt='Colegio 1' >" +
+        "</div>" +
+    "</div>" +
+    "</div>");
+
+
+
+    $(visor).html(htmlCol1);
+    $(visor).append(htmlCol2);
+
+
+
+ }
+
 
