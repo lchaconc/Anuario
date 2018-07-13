@@ -216,5 +216,14 @@ View.prototype.mainHighSchool = function (visor) {
 
 
  }
+ 
+
+ View.prototype.mainGroup = function (visor) {
+     $(visor).empty();
+     var htmlString = $(
+        
+        );
+    $(visor).html(htmlString);
+   }
 
 
