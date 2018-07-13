@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-4.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="./style.css">   
+    <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="./minigallery.js"></script>
+    <script>
+        const mg = new MiniGallery();
+        $(document).ready(function () {
+            console.log("ready");
+            
+            mg.start();
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img id="mainVisor" src="./images/pic1.jpg" alt="" class="img-fluid">
+                </div>
+
+            </div>
+            <div class="row">                    
+                        <div class="col-sm-12 text-center col-thmb">
+                            <img class='img-thmb' src='./images/pic1.jpg' alt="pic 1">
+                            <img class='img-thmb' src='./images/pic2.jpg' alt="pic 2">
+                            <img class='img-thmb' src='./images/pic3.jpg' alt="pic 3">
+                            <img class='img-thmb' src='./images/pic4.jpg' alt="pic 4">
+                            <img class='img-thmb' src='./images/pic5.jpg' alt="pic 5">
+                            <img class='img-thmb' src='./images/pic6.jpg' alt="pic 6">
+                        </div>                                                          
+            </div>
+    </div>
+    
+</body>
+</html>
