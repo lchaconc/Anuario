@@ -218,11 +218,48 @@ View.prototype.mainHighSchool = function (visor) {
  }
  
 
- View.prototype.mainGroup = function (visor) {
+View.prototype.menuPhotos = function (visor) {
+    $(visor).empty();
+    var htmlString = $(
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  En clases... </h4>   "  +
+        "</div>" +
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  Expo Ciencias </h4>   "  +
+        "</div>" +
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  Convivencias </h4>   "  +
+        "</div>" 
+    )
+
+    $(visor).html(htmlString);
+  }
+
+ View.prototype.mainPhotos = function (visor) {
+     console.log("vista maingroup");
+     
      $(visor).empty();
      var htmlString = $(
-        
-        );
+       " <div class='col-sm-12 container-gallery'>" +
+        "<div class='row'>" +
+            "<div class='col-sm-12 text-center col-main'>" +
+                "<img id='imgMainVisor' src='./images/pic1.jpg' alt='' class='img-fluid'>" +
+            "</div>" +
+        "</div>" +
+        "<div class='row'>" +
+                    "<div class='col-sm-12 text-center col-thmb'>" +
+                        "<img class='img-thmb img-thmb-sel' src='./images/pic1.jpg' alt='pic 1'>" +
+                        "<img class='img-thmb' src='./images/pic2.jpg' alt='pic 2'>" +
+                        "<img class='img-thmb' src='./images/pic3.jpg' alt='pic 3'>" +
+                        "<img class='img-thmb' src='./images/pic4.jpg' alt='pic 4'>" +
+                        "<img class='img-thmb' src='./images/pic5.jpg' alt='pic 5'>" +
+                        "<img class='img-thmb' src='./images/pic6.jpg' alt='pic 6'>" +
+                    "</div>" +
+        "</div>" +
+"</div>" );
     $(visor).html(htmlString);
    }
 

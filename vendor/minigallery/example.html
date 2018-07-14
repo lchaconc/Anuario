@@ -6,31 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap-4.1/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="./style.css">   
+    <link rel="stylesheet" href="./style-minigallery.css">   
     <script src="../jquery-3.3.1/jquery-3.3.1.min.js"></script>
     <script src="./minigallery.js"></script>
     <script>
-        const mg = new MiniGallery();
+        
         $(document).ready(function () {
-            console.log("ready");
             
-            mg.start();
+            miniGallery();            
         });
 
     </script>
 
 </head>
 <body>
-    <div class="container">
+    <div class="container-gallery">
             <div class="row">
-                <div class="col-sm-12 text-center">
-                    <img id="mainVisor" src="./images/pic1.jpg" alt="" class="img-fluid">
+                <div class="col-sm-12 text-center col-main">
+                    <img id="imgMainVisor" src="./images/pic1.jpg" alt="" class="img-fluid">
                 </div>
 
             </div>
             <div class="row">                    
                         <div class="col-sm-12 text-center col-thmb">
-                            <img class='img-thmb' src='./images/pic1.jpg' alt="pic 1">
+                            <img class='img-thmb img-thmb-sel' src='./images/pic1.jpg' alt="pic 1">
                             <img class='img-thmb' src='./images/pic2.jpg' alt="pic 2">
                             <img class='img-thmb' src='./images/pic3.jpg' alt="pic 3">
                             <img class='img-thmb' src='./images/pic4.jpg' alt="pic 4">

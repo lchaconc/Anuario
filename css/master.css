@@ -108,3 +108,12 @@ listaProfe
     border-radius: 15px;
 
 }
+
+.col-menu-photos {
+height: 28em;
+padding-top: 5em;
+}
+
+.menu-opt-camera {
+    cursor: pointer;
+}

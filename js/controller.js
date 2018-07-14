@@ -8,7 +8,7 @@ $(document).ready(function () {
    // console.log("ready");
     setTimeout(function () { 
         m.loadJson( "./data/estudiantes.json", loadApp, "s");    
-     }, 500);
+     }, 1500);
     
 });
 
@@ -43,8 +43,14 @@ function loadApp (dataset) {
             break;
             case "pillsGrupo":
             console.log("Grupo");
-            v.mainGroup("#mainVisor");  
-            startBanner();
+            v.menuPhotos($("#mainVisor"));
+            $(".menu-opt-camera").click(function (e) { 
+                e.preventDefault();
+                v.mainPhotos("#mainVisor");  
+                miniGallery();                 
+            });
+
+
             
             break;
             
@@ -96,9 +102,6 @@ function loadTechers(array) {
     
 }
 
-function startBanner() {
 
-    
-}
 
 
