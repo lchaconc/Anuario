@@ -6,24 +6,17 @@ var currentStudent=""; // Registro actual que fue seleccinado por el usuario.
 
 $(document).ready(function () {
    // console.log("ready");
-<<<<<<< HEAD
-    setTimeout(function () {
-        m.loadJson( "./data/estudiantes.json", loadApp, "s");
-     }, 3500);
-
-=======
     setTimeout(function () { 
         m.loadJson( "./data/estudiantes.json", loadApp, "s");    
      }, 1500);
     
->>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51
 });
 
 function loadApp (dataset) {
     v.htmlTemplate($(".container"));
     v.startScreen($("#mainVisor"));
     //Manejador de eventos menù superior
-    $(".nav-link").click(function (e) {
+    $(".nav-link").click(function (e) { 
         e.preventDefault();
         switch (this.id) {
             case "pillsInicio":
@@ -32,29 +25,19 @@ function loadApp (dataset) {
             case "pillsCompas":
                 v.mainStudents($("#mainVisor"));
                 v.listStudents(dataset,$("#listaEstudiantes"));
-                $(".alert-estudiante").click(function () {
+                $(".alert-estudiante").click(function () { 
                     $(".alert-estudiante").removeClass("btn-activo");
                     $(this).addClass("btn-activo");
                     selectStudent(this.id);
-
+                    
                 });
             break;
             case "pillsProfes":
             m.loadJson("./data/profesores.json", loadTechers, "t");
-
+            
             break;
             case "pillsCole":
             console.log("Cole");
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            break;
-            case "pillsGrupo":
-            console.log("Grupo");
-
-=======
-            v.mainHighSchool($("#mainVisor"));
-=======
             v.mainHighSchool($("#mainVisor"));
             
             break;
@@ -68,30 +51,16 @@ function loadApp (dataset) {
             });
 
 
->>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51
             
             break;
-            case "pillsGrupo":
-            console.log("Grupo");
-            v.menuPhotos($("#mainVisor"));
-            $(".menu-opt-camera").click(function (e) { 
-                e.preventDefault();
-                v.mainPhotos("#mainVisor");  
-                miniGallery();                 
-            });
-
-
             
->>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51
-            break;
-
-
+        
             default:
             console.log("Selecciòn fuera de rango");
-
+            
             break;
-        }
-    });
+        }        
+    });    
 }
 
 
@@ -103,10 +72,10 @@ function selectStudent(item) {
     $("#btnIam").addClass("btn-activo");
     $(".btn-menu-secundario").click(function () {
         $(".btn-menu-secundario").removeClass("btn-activo");
-        $(this).addClass("btn-activo");
+        $(this).addClass("btn-activo"); 
         switch (this.id) {
             case "btnIam":
-                v.infoStudent(currentStudent);
+                v.infoStudent(currentStudent);     
                 break;
             case "btnPictures":
                 v.pictures(currentStudent);
@@ -114,10 +83,10 @@ function selectStudent(item) {
             case "btnTestament":
                 v.testament(currentStudent);
                 break;
-
+        
             default:
                 break;
-        }
+        }        
     });
 }
 
@@ -128,9 +97,9 @@ function loadTechers(array) {
     $(".alert-profe").click(function (params) {
        // console.log(m.getRecordTeachers(this.id));
         v.infoTeacer(m.getRecordTeachers(this.id));
-
+        
     })
-
+    
 }
 
 
