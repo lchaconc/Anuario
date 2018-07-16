@@ -183,3 +183,87 @@ View.prototype.infoTeacer = function (item) {
     $("#visorSecundario").html(htmlCol);
     $("#nombreProfe").text(item.nombre + " " + item.apellido);
 }
+<<<<<<< HEAD
+=======
+
+View.prototype.mainHighSchool = function (visor) { 
+    $(visor).empty();
+    
+    var htmlCol1 = $("<div class='col-sm-8  col-info-cole'>" +
+    "<h2> Centro Educativo El Carmelo</h2>" +
+    "Curabitur id auctor quam. Donec quis est dictum, suscipit metus id, vestibulum orci. Ut molestie nec enim a ultricies. Fusce tincidunt urna vel pellentesque fringilla. Nam pretium nec libero quis imperdiet. Nullam sem felis, iaculis id mollis in, interdum suscipit nisl. Praesent ullamcorper diam quis ex iaculis venenatis. Etiam eget vulputate nisl. Duis odio risus, maximus eget pharetra ut, sodales efficitur mauris. Praesent gravida odio neque, ac pellentesque eros pellentesque sit amet. Integer volutpat quam vel libero venenatis, eu imperdiet nisl malesuada. Praesent dictum, enim a interdum tristique, turpis mauris interdum ex, eget venenatis lorem risus ut justo. Phasellus congue in ante non facilisis. Sed et consequat eros. Quisque ex elit, mollis in ultricies a, finibus eget arcu. " +
+    "</div>"),
+
+    htmlCol2 = $("<div class='col-sm-4'>" + 
+    "<div class='row'>" +
+        "<div class='col-sm-6'>"   + 
+            "<img class='img-thumbnail' src='img/colegio.jpg' alt='Colegio 1' >" +
+        "</div>" +
+        "<div class='col-sm-6'>"   + 
+            "<img class='img-thumbnail' src='img/colegio3.jpg' alt='Colegio 1' >" +
+        "</div>" +
+    "</div>" +
+    "<div class='row'>" +
+        "<div class='col-sm-12'>"   + 
+            "<img class='img-thumbnail' src='img/colegio2.jpg' alt='Colegio 1' >" +
+        "</div>" +
+    "</div>" +
+    "</div>");
+
+
+
+    $(visor).html(htmlCol1);
+    $(visor).append(htmlCol2);
+
+
+
+ }
+ 
+
+View.prototype.menuPhotos = function (visor) {
+    $(visor).empty();
+    var htmlString = $(
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  En clases... </h4>   "  +
+        "</div>" +
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  Expo Ciencias </h4>   "  +
+        "</div>" +
+        "<div class='col-sm-4 text-center col-menu-photos'>" +
+            "<img class='menu-opt-camera' src='./img/camera.png'>" +
+            "<h4>  Convivencias </h4>   "  +
+        "</div>" 
+    )
+
+    $(visor).html(htmlString);
+  }
+
+ View.prototype.mainPhotos = function (visor) {
+     console.log("vista maingroup");
+     
+     $(visor).empty();
+     var htmlString = $(
+       " <div class='col-sm-12 container-gallery'>" +
+        "<div class='row'>" +
+            "<div class='col-sm-12 text-center col-main'>" +
+                "<img id='imgMainVisor' src='./images/pic1.jpg' alt='' class='img-fluid'>" +
+            "</div>" +
+        "</div>" +
+        "<div class='row'>" +
+                    "<div class='col-sm-12 text-center col-thmb'>" +
+                        "<img class='img-thmb img-thmb-sel' src='./images/pic1.jpg' alt='pic 1'>" +
+                        "<img class='img-thmb' src='./images/pic2.jpg' alt='pic 2'>" +
+                        "<img class='img-thmb' src='./images/pic3.jpg' alt='pic 3'>" +
+                        "<img class='img-thmb' src='./images/pic4.jpg' alt='pic 4'>" +
+                        "<img class='img-thmb' src='./images/pic5.jpg' alt='pic 5'>" +
+                        "<img class='img-thmb' src='./images/pic6.jpg' alt='pic 6'>" +
+                    "</div>" +
+        "</div>" +
+"</div>" );
+    $(visor).html(htmlString);
+   }
+
+
+>>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51

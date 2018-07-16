@@ -6,10 +6,17 @@ var currentStudent=""; // Registro actual que fue seleccinado por el usuario.
 
 $(document).ready(function () {
    // console.log("ready");
+<<<<<<< HEAD
     setTimeout(function () {
         m.loadJson( "./data/estudiantes.json", loadApp, "s");
      }, 3500);
 
+=======
+    setTimeout(function () { 
+        m.loadJson( "./data/estudiantes.json", loadApp, "s");    
+     }, 1500);
+    
+>>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51
 });
 
 function loadApp (dataset) {
@@ -38,11 +45,28 @@ function loadApp (dataset) {
             break;
             case "pillsCole":
             console.log("Cole");
+<<<<<<< HEAD
 
             break;
             case "pillsGrupo":
             console.log("Grupo");
 
+=======
+            v.mainHighSchool($("#mainVisor"));
+            
+            break;
+            case "pillsGrupo":
+            console.log("Grupo");
+            v.menuPhotos($("#mainVisor"));
+            $(".menu-opt-camera").click(function (e) { 
+                e.preventDefault();
+                v.mainPhotos("#mainVisor");  
+                miniGallery();                 
+            });
+
+
+            
+>>>>>>> 75def6294a29b1b61795dfde6b9830072029fb51
             break;
 
 
@@ -92,3 +116,7 @@ function loadTechers(array) {
     })
 
 }
+
+
+
+

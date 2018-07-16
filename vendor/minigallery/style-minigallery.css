@@ -1,0 +1,44 @@
+.container-gallery {
+    /*background-color: black;*/
+    padding: 1em;
+}
+
+.img-thmb {
+    height: 128px;
+    margin-left: 1em;
+    border: solid 1px gray;
+    border-radius: 15px;
+    cursor: pointer;
+    filter:grayscale(100%);
+}
+
+
+.img-thmb:hover {
+    filter:grayscale(0);
+    border: solid 4px goldenrod;
+}
+
+
+
+
+.col-main {
+    height: 16em;
+}
+
+
+#imgMainVisor {
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+
+.col-thmb {
+    margin: 0.5em;
+    padding: 1em;    
+}
+
+.img-thmb-sel {
+    filter:grayscale(0);
+    border: solid 4px goldenrod; 
+}
+
