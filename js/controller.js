@@ -8,7 +8,7 @@ $(document).ready(function () {
    // console.log("ready");
     setTimeout(function () {
         m.loadJson( "./data/estudiantes.json", loadApp, "s");
-     }, 3500);
+     }, 1500);
 
 });
 
@@ -38,10 +38,19 @@ function loadApp (dataset) {
             break;
             case "pillsCole":
             console.log("Cole");
+            v.mainHighSchool($("#mainVisor"));
 
             break;
             case "pillsGrupo":
             console.log("Grupo");
+            v.menuPhotos($("#mainVisor"));
+            $(".menu-opt-camera").click(function (e) {
+                e.preventDefault();
+                v.mainPhotos("#mainVisor");
+                miniGallery();
+            });
+
+
 
             break;
 

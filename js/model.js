@@ -1,12 +1,12 @@
 function Model () {
-    
+
 }
 
 Model.prototype.dataStudents="";
 Model.prototype.dataTeachers="";
 
-Model.prototype.loadJson = function (path, mCallBack, act) { 
-    $.getJSON(  path, 
+Model.prototype.loadJson = function (path, mCallBack, act) {
+    $.getJSON(  path,
         function (data, textStatus, jqXHR) {
             switch (act) {
                 case "s":
@@ -17,12 +17,12 @@ Model.prototype.loadJson = function (path, mCallBack, act) {
                 Model.prototype.dataTeachers=data;
                 //console.log( Model.prototype.dataTeachers);
                 break;
-            
+
                 default:
                     break;
             }
 
-            mCallBack(data);            
+            mCallBack(data);
         }
     );
  }
@@ -38,4 +38,3 @@ Model.prototype.getRecordStudents = function (i) {
 Model.prototype.getRecordTeachers = function (i) {
     return  Model.prototype.dataTeachers[i];
 }
-
